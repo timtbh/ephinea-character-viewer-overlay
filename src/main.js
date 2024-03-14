@@ -1,8 +1,7 @@
-// TODO: find a CDN with the Hack typeface and stop bundling it
-import hack from './css/hack.css?inline'
-import style from './css/style.css?inline'
-import colors from './css/colors.css?inline'
-import img from './css/img.css?inline'
+import hack from '../css/hack.css?inline'
+import style from '../css/style.css?inline'
+import colors from '../css/colors.css?inline'
+import img from '../css/img.css?inline'
 
 import { unitxt } from "./unitxt.js"
 import { itemsEqual } from "./equal.js"
@@ -17,6 +16,26 @@ const settingsDefaults =
   , showStacked  : true
   , showSettings : false
   }
+
+const saveSettings = settings =>
+  Object.entries(settings)
+    .forEach(([key, val]) => {
+      localStorage.setItem(`eph-cvo-${key}`, val)
+    })
+
+const loadSettings = () => {
+  // reminder: Boolean("false") === true, because javascript
+  const cast = value =>
+    value == "true" || value == "false"
+      ? value == "true"
+      : value
+
+  const settings = Object.entries(localStorage)
+    .filter(([key, _]) => key.match(/^eph-cvo-/))
+    .map(([key, val]) => [key.replace(/^eph-cvo-/, ""), cast(val)])
+
+  return { ...settingsDefaults, ...Object.fromEntries(settings) }
+}
 
 const sortAndStack = items => {
   if (!items.length) return []
@@ -81,13 +100,11 @@ const addItemGroups = viewer => {
 }
 
 const showOverlay = (viewer, settings) => {
-  // do something with localStorage here?
-  const settings_ = { ...settingsDefaults, ...settings }
   dom.select('#cvo-root').innerHTML =
     showMain(
-      settings_.showStacked ? withStackedBank(viewer) : viewer ,
-      unitxt[settings_.lang],
-      settings_
+      settings.showStacked ? withStackedBank(viewer) : viewer ,
+      unitxt[settings.lang],
+      settings
     )
   dom.onReload()
 }
@@ -106,21 +123,22 @@ const main = () => {
   
   const viewer = addItemGroups(dom.getCharacterViewerData())
 
-  // TODO: add new settings to localStorage
   document.addEventListener(
     "Settings Changed",
     event => {
+      const settings = dom.readSettingsFromDom()
+      saveSettings(settings)
       if (event.detail.changed == "stack settings") {
         const closest = dom.closestEntryId()
-        showOverlay(viewer, dom.readSettingsFromDom())
+        showOverlay(viewer, settings)
         document.getElementById(closest).scrollIntoView()
       } else {
-        showOverlay(viewer, dom.readSettingsFromDom())
+        showOverlay(viewer, settings)
       }
     }
   )
 
-  showOverlay(viewer)
+  showOverlay(viewer, loadSettings())
 }
 
 main()

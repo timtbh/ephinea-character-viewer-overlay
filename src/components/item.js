@@ -1,5 +1,5 @@
-import { pmt } from '/pmt.js'
-import { cssIdentifierFrom } from '/utils.js'
+import { pmt } from '../pmt.js'
+import { cssIdentifierFrom } from '../utils.js'
 
 export const defaults =
   { showSlot: true

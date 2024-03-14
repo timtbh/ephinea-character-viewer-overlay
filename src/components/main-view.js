@@ -1,4 +1,4 @@
-import { range, cssIdentifierFrom } from "/utils.js"
+import { range, cssIdentifierFrom } from "../utils.js"
 import { showItem, defaults } from "./item.js"
 import { showJumpMenu } from "./jump-menu.js"
 

@@ -24,8 +24,8 @@ dist-ssr
 *.sw?
 
 *.html
+!index.html
 *.psd
 
-pnpm-lock.yaml
 scratch/
 fonts/

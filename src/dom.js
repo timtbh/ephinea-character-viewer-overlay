@@ -9,7 +9,7 @@ import
 
 // 1. helpers
 const select = (query, element = document) =>
-  element.querySelector(query) || (console.log(`select(${query}) is null`))
+  element.querySelector(query)
 
 const selectAll = (query, element = document) =>
   Array.from(element.querySelectorAll(query))
@@ -83,7 +83,7 @@ export const getCharacterViewerData = () => {
 }
 
 export const characterDataIsLoaded = () =>
-  select("table") !== null
+  !!select("table")
 
 // 3. &c.
 export const openJumpMenu = () => removeClass(select("#jump-menu-wrapper"), "hide")

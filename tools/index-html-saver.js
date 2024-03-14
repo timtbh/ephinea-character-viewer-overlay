@@ -14,7 +14,6 @@
     <title>View Character Data | Ephinea PSOBB</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cousine:ital,wght@0,400;0,700;1,400;1,700&family=Fira+Mono:wght@400;500;700&family=Fragment+Mono:ital@0;1&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Martian+Mono:wght@100..800&family=Noto+Sans+Mono:wght@100..900&display=swap" rel="stylesheet">
   </head>
   <body style="margin: 0;">
     <div class="wrap container body" role="document">
@@ -23,7 +22,7 @@
 const end = 
 `     </div><!-- /.content -->
     </div><!-- /.wrap -->
-    <script type="module" src="/main.js"></script>
+    <script type="module" src="src/main.js"></script>
   </body>
 </html>`
 

@@ -1,4 +1,4 @@
-import { range } from '/utils.js'
+import { range } from '../utils.js'
 
 const characterAt = (characters, cbank, slot) =>
   characters.find (
