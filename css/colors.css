@@ -1,0 +1,248 @@
+.cvo {
+  .common-name     { color: #B060B0 }
+  .rare-name       { color: #FF0000 }
+  .srank-name      { color: #FF0000 }
+  .armor-name      { color: #FF0000 }
+  .shield-name     { color: #FF0000 }
+  .mag-name        { color: #B060B0 }
+  .unit-name       { color: #FF0000 }
+  .tech-name       { color: #B060B0 }
+  .tool-name       { color: #FF0000 }
+  .music-disk-name { color: #EAF718 }
+
+  .es-custom-name { color: #B060B0 }
+
+  .grind { color: #28CC66 }
+
+  .untekked { color: #FFFF00 }
+
+  .killcount { color: #FFFF00 }
+
+  .mag-pb { color: #FFFF00 }
+  .mag-color { color: #2D98B7 }
+
+  .weapon-grind { color: #28CC66 }
+
+  .hit-100 { color: #FF0000 }
+  .hit-95  { color: #FF0000 }
+  .hit-90  { color: #FF3800 }
+  .hit-85  { color: #FF3800 }
+  .hit-80  { color: #FF7100 }
+  .hit-75  { color: #FF7100 }
+  .hit-70  { color: #FFAA00 }
+  .hit-65  { color: #FFAA00 }
+  .hit-60  { color: #FFE200 }
+  .hit-55  { color: #FFE200 }
+  .hit-50  { color: #E2FF00 }
+  .hit-45  { color: #E2FF00 }
+  .hit-40  { color: #AAFF00 }
+  .hit-35  { color: #AAFF00 }
+  .hit-30  { color: #71FF00 }
+  .hit-25  { color: #71FF00 }
+  .hit-20  { color: #38FF00 }
+  .hit-15  { color: #38FF00 }
+  .hit-10  { color: #00FF00 }
+  .hit-5   { color: #00FF00 }
+  .hit-0   { color: #FFFFFF }
+  .hit--5  { color: #A0A0A0 }
+
+  .weapon-stat-100 { color: #FFFFFF }
+  .weapon-stat-95  { color: #FFFFFF }
+  .weapon-stat-90  { color: #FFFFFF }
+  .weapon-stat-85  { color: #FFFFFF }
+  .weapon-stat-80  { color: #FFFFFF }
+  .weapon-stat-75  { color: #FFFFFF }
+  .weapon-stat-70  { color: #FFFFFF }
+  .weapon-stat-65  { color: #FFFFFF }
+  .weapon-stat-60  { color: #FFFFFF }
+  .weapon-stat-55  { color: #FFFFFF }
+  .weapon-stat-50  { color: #FFFFFF }
+  .weapon-stat-45  { color: #FFFFFF }
+  .weapon-stat-40  { color: #FFFFFF }
+  .weapon-stat-35  { color: #FFFFFF }
+  .weapon-stat-30  { color: #FFFFFF }
+  .weapon-stat-25  { color: #FFFFFF }
+  .weapon-stat-20  { color: #FFFFFF }
+  .weapon-stat-15  { color: #FFFFFF }
+  .weapon-stat-10  { color: #FFFFFF }
+  .weapon-stat-5   { color: #FFFFFF }
+  .weapon-stat-0   { color: #A0A0A0 }
+
+  .frame-stat  { color: #28CC66 }
+  .frame-stat-0 { color: #A0A0A0 }
+  .barrier-stat { color: #28CC66}
+  .barrier-stat-0 { color: #A0A0A0 }
+  .mag-stat    { color: #28CC66 }
+
+  .slots { color: #FFFF00 }
+
+  .amount { color: #28CC66 }
+
+  .special-1  { color: #BFFDC4 } /* Draw */
+  .special-2  { color: #80FB8A } /* Drain */
+  .special-3  { color: #40F94F } /* Fill */
+  .special-4  { color: #00F714 } /* Gush */
+  .special-5  { color: #BFE1FC } /* Heart */
+  .special-6  { color: #80C4FA } /* Mind */
+  .special-7  { color: #40A6F7 } /* Soul */
+  .special-8  { color: #0088F4 } /* Geist */
+  .special-9  { color: #FFB8FF } /* Master's */
+  .special-10 { color: #FF72FF } /* Lord's */
+  .special-11 { color: #FF2BFF } /* King's */
+  .special-12 { color: #EBEB00 } /* Charge */
+  .special-13 { color: #F7BB13 } /* Spirit */
+  .special-14 { color: #EAF718 } /* Berserk */
+  .special-15 { color: #CBF2FF } /* Ice */
+  .special-16 { color: #98E5FF } /* Frost */
+  .special-17 { color: #64D8FF } /* Freeze */
+  .special-18 { color: #31CBFF } /* Blizzard */
+  .special-19 { color: #F9D4C7 } /* Bind */
+  .special-20 { color: #F3AA90 } /* Hold */
+  .special-21 { color: #ED8058 } /* Seize */
+  .special-22 { color: #E75521 } /* Arrest */
+  .special-23 { color: #FFDDCC } /* Heat */
+  .special-24 { color: #FFBB9A } /* Fire */
+  .special-25 { color: #FF9967 } /* Flame */
+  .special-26 { color: #FF7734 } /* Burning */
+  .special-27 { color: #FBFBBF } /* Shock */
+  .special-28 { color: #F7F780 } /* Thunder */
+  .special-29 { color: #F3F240 } /* Storm */
+  .special-30 { color: #EFEE00 } /* Tempest */
+  .special-31 { color: #F2C4FF } /* Dim */
+  .special-32 { color: #E588FF } /* Shadow */
+  .special-33 { color: #D84DFF } /* Dark */
+  .special-34 { color: #CB11FF } /* Hell */
+  .special-35 { color: #FDC7E5 } /* Panic */
+  .special-36 { color: #FC8FCB } /* Riot */
+  .special-37 { color: #FA57B2 } /* Havoc */
+  .special-38 { color: #F91F98 } /* Chaos */
+  .special-39 { color: #D3BFF0 } /* Devil's */
+  .special-40 { color: #A67FE0 } /* Demon's */
+  .special-41 { color: #FF2031 } /* Jellen */
+  .special-42 { color: #0065FF } /* Zalure */
+
+  /* LOL */
+  .special-HP-Regeneration { color: #00F714 }
+  .special-TP-Regeneration { color: #0088F4 }
+
+  /* item-specific overrides */
+  .Scape-Doll { color: #FF8C00 }
+
+  .Monomate       { color: #B060B0 }
+  .Dimate         { color: #B060B0 }
+  .Trimate        { color: #B060B0 }
+  .Monofluid      { color: #B060B0 }
+  .Difluid        { color: #B060B0 }
+  .Trifluid       { color: #B060B0 }
+  .Sol-Atomizer   { color: #B060B0 }
+  .Moon-Atomizer  { color: #B060B0 }
+  .Star-Atomizer  { color: #B060B0 }
+  .Antidote       { color: #B060B0 }
+  .Antiparalysis  { color: #B060B0 }
+  .Telepipe       { color: #B060B0 }
+  .Trap-Vision    { color: #B060B0 }
+  .Monogrinder    { color: #B060B0 }
+  .Digrinder      { color: #B060B0 }
+  .Trigrinder     { color: #B060B0 }
+  .Def-Material   { color: #B060B0 }
+  .Evade-Material { color: #B060B0 }
+
+  .Power-Material { color: #FFAA00 }
+  .Mind-Material  { color: #FFAA00 }
+  .HP-Material    { color: #FFAA00 }
+  .TP-Material    { color: #FFAA00 }
+  .Luck-Material  { color: #FF0000 }
+
+  .Foie-Lv29    { color: #00FF00 }
+  .Gifoie-Lv29  { color: #00FF00 }
+  .Rafoie-Lv29  { color: #00FF00 }
+  .Barta-Lv29   { color: #00FF00 }
+  .Gibarta-Lv29 { color: #00FF00 }
+  .Rabarta-Lv29 { color: #00FF00 }
+  .Zonde-Lv29   { color: #00FF00 }
+  .Gizonde-Lv29 { color: #00FF00 }
+  .Razonde-Lv29 { color: #00FF00 }
+  .Shifta-Lv30  { color: #00FF00 }
+  .Deband-Lv30  { color: #00FF00 }
+  .Jellen-Lv30  { color: #00FF00 }
+  .Zalure-Lv30  { color: #00FF00 }
+  .Resta-Lv30   { color: #00FF00 }
+  .Anti-Lv7     { color: #00FF00 }
+  .Reverser-Lv1 { color: #00FF00 }
+  .Ryuker-Lv1   { color: #00FF00 }
+  .Grants-Lv27  { color: #00FF00 }
+  .Grants-Lv28  { color: #00FF00 }
+  .Grants-Lv29  { color: #00FF00 }
+  .Megid-Lv27   { color: #00FF00 }
+  .Megid-Lv28   { color: #00FF00 }
+  .Megid-Lv29   { color: #00FF00 }
+
+  .Foie-Lv20    { color: #00FF00 }
+  .Gifoie-Lv20  { color: #00FF00 }
+  .Rafoie-Lv20  { color: #00FF00 }
+  .Barta-Lv20   { color: #00FF00 }
+  .Gibarta-Lv20 { color: #00FF00 }
+  .Rabarta-Lv20 { color: #00FF00 }
+  .Zonde-Lv20   { color: #00FF00 }
+  .Gizonde-Lv20 { color: #00FF00 }
+  .Razonde-Lv20 { color: #00FF00 }
+  .Shifta-Lv20  { color: #00FF00 }
+  .Deband-Lv20  { color: #00FF00 }
+  .Jellen-Lv20  { color: #00FF00 }
+  .Zalure-Lv20  { color: #00FF00 }
+  .Resta-Lv20   { color: #00FF00 }
+
+  .Foie-Lv15    { color: #00FF00 }
+  .Gifoie-Lv15  { color: #00FF00 }
+  .Rafoie-Lv15  { color: #00FF00 }
+  .Barta-Lv15   { color: #00FF00 }
+  .Gibarta-Lv15 { color: #00FF00 }
+  .Rabarta-Lv15 { color: #00FF00 }
+  .Zonde-Lv15   { color: #00FF00 }
+  .Gizonde-Lv15 { color: #00FF00 }
+  .Razonde-Lv15 { color: #00FF00 }
+  .Shifta-Lv15  { color: #00FF00 }
+  .Deband-Lv15  { color: #00FF00 }
+  .Jellen-Lv15  { color: #00FF00 }
+  .Zalure-Lv15  { color: #00FF00 }
+  .Resta-Lv15   { color: #00FF00 }
+  .Anti-Lv5     { color: #00FF00 }
+
+  .Foie-Lv30    { color: #FF0000 }
+  .Gifoie-Lv30  { color: #FF0000 }
+  .Rafoie-Lv30  { color: #FF0000 }
+  .Barta-Lv30   { color: #FF0000 }
+  .Gibarta-Lv30 { color: #FF0000 }
+  .Rabarta-Lv30 { color: #FF0000 }
+  .Zonde-Lv30   { color: #FF0000 }
+  .Gizonde-Lv30 { color: #FF0000 }
+  .Razonde-Lv30 { color: #FF0000 }
+  .Grants-Lv30  { color: #FF0000 }
+  .Megid-Lv30   { color: #FF0000 }
+
+  .Disk-Vol1-Wedding-March               { color: #EAF718 }
+  .Disk-Vol2-Day-Light                   { color: #EAF718 }
+  .Disk-Vol3-Burning-Rangers             { color: #EAF718 }
+  .Disk-Vol4-Open-Your-Heart             { color: #EAF718 }
+  .Disk-Vol5-Live-Learn                  { color: #EAF718 }
+  .Disk-Vol6-NiGHTS                      { color: #EAF718 }
+  .Disk-Vol7-Ending-Theme-Piano-ver      { color: #EAF718 }
+  .Disk-Vol8-Heart-to-Heart              { color: #EAF718 }
+  .Disk-Vol9-Strange-Blue                { color: #EAF718 }
+  .Disk-Vol10-Reunion-System             { color: #EAF718 }
+  .Disk-Vol11-Pinnacles                  { color: #EAF718 }
+  .Disk-Vol12-Fight-inside-the-Spaceship { color: #EAF718 }
+  .Disk-Vol13-Get-It-Up                  { color: #EAF718 }
+  .Disk-Vol14-Flight                     { color: #EAF718 }
+  .Disk-Vol15-Space-Harrier              { color: #EAF718 }
+  .Disk-Vol16-Deathwatch                 { color: #EAF718 }
+  .Disk-Vol17-Fly-Me-To-The-Moon         { color: #EAF718 }
+  .Disk-Vol18-Puyo-Puyo                  { color: #EAF718 }
+  .Disk-Vol19-Rhythm-And-Balance         { color: #EAF718 }
+  .Disk-Vol20-The-Party-Must-Go-On       { color: #EAF718 }
+  .Disk-Vol21-Armada-Battle              { color: #EAF718 }
+  .Disk-Vol22-Back-2-Back                { color: #EAF718 }
+  .Disk-Vol23-The-Strange-Fruits         { color: #EAF718 }
+  .Disk-Vol24-The-Whims-of-Fate          { color: #EAF718 }
+  .Disk-Vol25-Last-Impression            { color: #EAF718 }
+}
