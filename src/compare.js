@@ -15,6 +15,10 @@ const compareWeapons = (a, b) =>
     ,[ "hex"     , "asc"  ]
     ,[ "special" , "desc" ]
     ,[ "hit"     , "desc" ]
+    ,[ "native"  , "desc" ]
+    ,[ "abeast"  , "desc" ]
+    ,[ "machine" , "desc" ]
+    ,[ "dark"    , "desc" ]
     ,[ "grind"   , "desc" ]
     ]
   )
