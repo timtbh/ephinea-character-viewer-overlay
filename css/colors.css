@@ -220,29 +220,5 @@
   .Grants-Lv30  { color: #FF0000 }
   .Megid-Lv30   { color: #FF0000 }
 
-  .Disk-Vol1-Wedding-March               { color: #EAF718 }
-  .Disk-Vol2-Day-Light                   { color: #EAF718 }
-  .Disk-Vol3-Burning-Rangers             { color: #EAF718 }
-  .Disk-Vol4-Open-Your-Heart             { color: #EAF718 }
-  .Disk-Vol5-Live-Learn                  { color: #EAF718 }
-  .Disk-Vol6-NiGHTS                      { color: #EAF718 }
-  .Disk-Vol7-Ending-Theme-Piano-ver      { color: #EAF718 }
-  .Disk-Vol8-Heart-to-Heart              { color: #EAF718 }
-  .Disk-Vol9-Strange-Blue                { color: #EAF718 }
-  .Disk-Vol10-Reunion-System             { color: #EAF718 }
-  .Disk-Vol11-Pinnacles                  { color: #EAF718 }
-  .Disk-Vol12-Fight-inside-the-Spaceship { color: #EAF718 }
-  .Disk-Vol13-Get-It-Up                  { color: #EAF718 }
-  .Disk-Vol14-Flight                     { color: #EAF718 }
-  .Disk-Vol15-Space-Harrier              { color: #EAF718 }
-  .Disk-Vol16-Deathwatch                 { color: #EAF718 }
-  .Disk-Vol17-Fly-Me-To-The-Moon         { color: #EAF718 }
-  .Disk-Vol18-Puyo-Puyo                  { color: #EAF718 }
-  .Disk-Vol19-Rhythm-And-Balance         { color: #EAF718 }
-  .Disk-Vol20-The-Party-Must-Go-On       { color: #EAF718 }
-  .Disk-Vol21-Armada-Battle              { color: #EAF718 }
-  .Disk-Vol22-Back-2-Back                { color: #EAF718 }
-  .Disk-Vol23-The-Strange-Fruits         { color: #EAF718 }
-  .Disk-Vol24-The-Whims-of-Fate          { color: #EAF718 }
-  .Disk-Vol25-Last-Impression            { color: #EAF718 }
+  [class*="Disk-Vol"] { color: #EAF718 }
 }
