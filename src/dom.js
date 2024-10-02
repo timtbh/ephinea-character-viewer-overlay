@@ -52,7 +52,15 @@ const scrollTo = (query, behavior = "smooth") =>
 // 2. scraping the (original) DOM
 const getCharacter = table => {
   const tds = textAll("td", table)
-  const character = readCharacterInfo(tds[0])
+
+  // Can't rely on `textContent` because names with emojis are rendered with <img>
+  const characterText = select("td:first-child font", table)
+    .innerHTML
+    .replace(/<\/?(?:b|i|strong|em)(?: [^>]+)?>/g, "") // strip styling tags
+    .replace(/(?:&nbsp;|<br>|<br\>|\s)+/g, " ") // collapse whitespace
+    .trim()
+
+  const character = readCharacterInfo(characterText)
 
   const k = character.inventorySize
   

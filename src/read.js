@@ -7,8 +7,13 @@ const readGuildCard = str =>
 const readAccountType = str =>
   str.match(/^Account type: (\w+)$/)[1]
 
-const regexCharacterInfo =
-  /^(Classic\s+)?Character Slot (\d+) \((.+?)\) LV(\d+) (\w+) (\w+) \((\d+)\/30\):$/
+const regexCharacterInfo = new RegExp(
+  [ "^(Classic\\s+)?Character Slot (\\d+) \\((.+?)\\) LV(\\d+) (\\w+) (\\w+) "
+  , "Meseta: (\\d+) Items: \\((\\d+)\\/30\\): Modded Section ID: (\\w+) "
+  , "Has Special ID Change: (\\w+)"
+  ]
+  .join("")
+)
 
 const readCharacterInfo = str => {
   const match = str.match(regexCharacterInfo)
@@ -20,7 +25,9 @@ const readCharacterInfo = str => {
     , level          : +match[4]
     , sectionId      : match[5]
     , characterClass : match[6]
-    , inventorySize  : +match[7]
+    , meseta         : +match[7]
+    , inventorySize  : +match[8]
+    , canModsecid    : match[8] == "NO" || match[9] == "YES"
     })
 }
 
@@ -29,10 +36,9 @@ const readBankSize = str =>
 
 // Skinned items with <foo>* names resolve to the same hex as <foo>
 // e.g.
-//      lookupHex("Red Ring*, "Weapon") == lookupHex("Red Ring, "Weapon")
+//      lookupHex("Red Ring*", "Weapon") == lookupHex("Red Ring", "Weapon")
 const lookupHex = (() => {
-  //      { <hex>: { <pmtdata> } }
-  //  ->  { <name>: <hex> }
+  // make tables with unitxt keys for O(1) lookups
   const makeLookupTable = (start, end) => Object.keys(pmt)
     .filter(hex => hex >= start && hex <= end)
     .reduce((acc, hex) =>
