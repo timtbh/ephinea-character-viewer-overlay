@@ -54,9 +54,9 @@ const getCharacter = table => {
   const tds = textAll("td", table)
 
   // Can't rely on `textContent` because names with emojis are rendered with <img>
-  const characterText = select("td:first-child font", table)
+  const characterText = select("td:first-child", table)
     .innerHTML
-    .replace(/<\/?(?:b|i|strong|em)(?: [^>]+)?>/g, "") // strip styling tags
+    .replace(/<\/?(?:span|font|b|i|strong|em)(?: [^>]+)?>/g, "") // strip styling tags
     .replace(/(?:&nbsp;|<br>|<br\>|\s)+/g, " ") // collapse whitespace
     .trim()
 
