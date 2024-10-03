@@ -1,5 +1,3 @@
-// pmt last fetched from Ephinea client on 3/10/24
-
 // On missing hexes:
 // tldr: looking up hex when we have only (EN) unitxt to work from hinges on there
 // being no two items with the same name. If we scope lookups by item categories (tables)
