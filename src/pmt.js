@@ -938,14 +938,14 @@ export const pmt =
   , 0x030D14: {} // Cladding of Epsilon
   , 0x030D15: {} // De Rol Le Shell
   , 0x030E00: {} // Berill Photon
-  , 0x030E01: {} // Parasitic Gene \"Flow\"
-  , 0x030E02: {} // Magic Stone \"Iritista\"
+  , 0x030E01: {} // Parasitic Gene "Flow"
+  , 0x030E02: {} // Magic Stone "Iritista"
   , 0x030E03: {} // Blue-black stone
   , 0x030E04: {} // Syncesta
   , 0x030E05: {} // Magic Water
   , 0x030E06: {} // Parasitic Cell Type D
-  , 0x030E07: {} // Magic Rock \"Heart Key\"
-  , 0x030E08: {} // Magic Rock \"Moola\"
+  , 0x030E07: {} // Magic Rock "Heart Key"
+  , 0x030E08: {} // Magic Rock "Moola"
   , 0x030E09: {} // Star Amplifier
   , 0x030E0A: {} // Book of Hitogata
   , 0x030E0B: {} // Heart of Chu Chu
@@ -1092,49 +1092,37 @@ export const pmt =
   , 0x031300: {} // Present
   , 0x031400: {} // Chocolate
   , 0x031401: {} // Candy
-  , 0x031402: {} // Cake
-  , 0x031403: {} // Weapons Silver Badge
-  , 0x031404: {} // Weapons Gold Badge
-  , 0x031405: {} // Weapons Crystal Badge
-  , 0x031406: {} // Weapons Steel Badge
-  , 0x031407: {} // Weapons Aluminum Badge
-  , 0x031408: {} // Weapons Leather Badge
-  , 0x031409: {} // Weapons Bone Badge
   , 0x03140A: {} // Bouquet
   , 0x03140B: {} // Decoction
   , 0x031500: {} // Christmas Present
   , 0x031501: {} // Easter Egg
   , 0x031502: {} // Jack-O'-Lantern
-  , 0x031600: {} // Disk Vol.1 \"Wedding March\"
-  , 0x031601: {} // Disk Vol.2 \"Day Light\"
-  , 0x031602: {} // Disk Vol.3 \"Burning Rangers\"
-  , 0x031603: {} // Disk Vol.4 \"Open Your Heart\"
-  , 0x031604: {} // Disk Vol.5 \"Live & Learn\"
-  , 0x031605: {} // Disk Vol.6 \"NiGHTS\"
-  , 0x031606: {} // Disk Vol.7 \"Ending Theme (Piano ver.)\"
-  , 0x031607: {} // Disk Vol.8 \"Heart to Heart\"
-  , 0x031608: {} // Disk Vol.9 \"Strange Blue\"
-  , 0x031609: {} // Disk Vol.10 \"Reunion System\"
-  , 0x03160A: {} // Disk Vol.11 \"Pinnacles\"
-  , 0x03160B: {} // Disk Vol.12 \"Fight inside the Spaceship\"
-  , 0x03160C: {} // Disk Vol.13 \"Get It Up\"
-  , 0x03160D: {} // Disk Vol.14 \"Flight\"
-  , 0x03160E: {} // Disk Vol.15 \"Space Harrier\"
-  , 0x03160F: {} // Disk Vol.16 \"Deathwatch\"
-  , 0x031610: {} // Disk Vol.17 \"Fly Me To The Moon\"
-  , 0x031611: {} // Disk Vol.18 \"Puyo Puyo\"
-  , 0x031612: {} // Disk Vol.19 \"Rhythm And Balance\"
-  , 0x031613: {} // Disk Vol.20 \"The Party Must Go On\"
-  , 0x031614: {} // Disk Vol.21 \"Armada Battle\"
-  , 0x031615: {} // Disk Vol.22 \"Back 2 Back\"
-  , 0x031616: {} // Disk Vol.23 \"The Strange Fruits\"
-  , 0x031617: {} // Disk Vol.24 \"The Whims of Fate\"
-  , 0x031618: {} // Disk Vol.25 \"Last Impression\"
+  , 0x031600: {} // Disk Vol.1 "Wedding March"
+  , 0x031601: {} // Disk Vol.2 "Day Light"
+  , 0x031602: {} // Disk Vol.3 "Burning Rangers"
+  , 0x031603: {} // Disk Vol.4 "Open Your Heart"
+  , 0x031604: {} // Disk Vol.5 "Live & Learn"
+  , 0x031605: {} // Disk Vol.6 "NiGHTS"
+  , 0x031606: {} // Disk Vol.7 "Ending Theme (Piano ver.)"
+  , 0x031607: {} // Disk Vol.8 "Heart to Heart"
+  , 0x031608: {} // Disk Vol.9 "Strange Blue"
+  , 0x031609: {} // Disk Vol.10 "Reunion System"
+  , 0x03160A: {} // Disk Vol.11 "Pinnacles"
+  , 0x03160B: {} // Disk Vol.12 "Fight inside the Spaceship"
+  , 0x03160C: {} // Disk Vol.13 "Get It Up"
+  , 0x03160D: {} // Disk Vol.14 "Flight"
+  , 0x03160E: {} // Disk Vol.15 "Space Harrier"
+  , 0x03160F: {} // Disk Vol.16 "Deathwatch"
+  , 0x031610: {} // Disk Vol.17 "Fly Me To The Moon"
+  , 0x031611: {} // Disk Vol.18 "Puyo Puyo"
+  , 0x031612: {} // Disk Vol.19 "Rhythm And Balance"
+  , 0x031613: {} // Disk Vol.20 "The Party Must Go On"
+  , 0x031614: {} // Disk Vol.21 "Armada Battle"
+  , 0x031615: {} // Disk Vol.22 "Back 2 Back"
+  , 0x031616: {} // Disk Vol.23 "The Strange Fruits"
+  , 0x031617: {} // Disk Vol.24 "The Whims of Fate"
+  , 0x031618: {} // Disk Vol.25 "Last Impression"
   , 0x031700: {} // Hunters Report
-  , 0x031701: {} // Hunters Report
-  , 0x031702: {} // Hunters Report
-  , 0x031703: {} // Hunters Report
-  , 0x031704: {} // Hunters Report
   , 0x031705: {} // Viridia Badge
   , 0x031706: {} // Greenill Badge
   , 0x031707: {} // Skyly Badge
