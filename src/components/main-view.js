@@ -1,4 +1,4 @@
-import { range, cssIdentifierFrom } from "../utils.js"
+import { range, chunksOf, cssIdentifierFrom } from "../utils.js"
 import { showItem, defaults } from "./item.js"
 import { showJumpMenu } from "./jump-menu.js"
 
@@ -21,6 +21,39 @@ const showItems = (items, unitxt, itemsPerColumn, settings = defaults) => {
 const link = character =>
   `cvo-character-${character.cbank}-${character.slot}`
 
+const showTraps = (characterClass, level) => {
+  const casts = 
+    { "HUcast"   : [11, 7, 7]
+    , "HUcaseal" : [9, 10, 10]
+    , "RAcast"   : [7, 9, 11]
+    , "RAcaseal" : [7, 11, 9]
+    }
+
+  // TODO: replace this with unitxt lookup
+  const traps = ["Damage trap", "Freeze trap", "Confuse trap"]
+
+  if (!Object.keys(casts).includes(characterClass))
+    return ""
+
+  return traps.map((trap, idx) => {
+    const numTraps = Math.min(20, 2 + Math.floor(level / casts[characterClass][idx]))
+    return `
+      <div class="traps slot-prefix">
+        ${"&nbsp;".repeat(4)}
+        ${trap} x${numTraps}
+      </div>`
+  }).join("")
+}
+
+const showMeseta = (meseta) => {
+  const formatted = meseta.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')
+  return `
+    <div class="inventory-meseta">
+      ${"&nbsp;".repeat(4)}
+      <span class="meseta">◆ ${formatted}</span>
+    </div>`
+}
+
 const showCharacter = (character, unitxt) =>
   `<section class="entry" id="${link(character)}">
     <div class="left-column">
@@ -37,6 +70,7 @@ const showCharacter = (character, unitxt) =>
       <div class="column-label">INVENTORY (${character.inventorySize}/30)</div>
       <div class="inventory">
         ${showItems(character.inventory, unitxt, 50)}
+        ${showMeseta(character.meseta)}
       </div>
     </div>
     <div class="right-column">

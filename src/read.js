@@ -27,7 +27,8 @@ const readCharacterInfo = str => {
     , characterClass : match[6]
     , meseta         : +match[7]
     , inventorySize  : +match[8]
-    , canModsecid    : match[8] == "NO" || match[9] == "YES"
+    , moddedSecid    : match[9] == "YES"
+    , freeModsecid   : match[10] == "YES"
     })
 }
 
