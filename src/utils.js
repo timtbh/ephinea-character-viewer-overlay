@@ -29,7 +29,7 @@ export const chunksOf = k => xs => {
 }
 
 export const range = (x, y, step = 1) =>
-  x > y ? [] : [x, ...range(x + step, y)]
+  x > y ? [] : [x, ...range(x + step, y, step)]
 
 export const keysEqual = (o1, o2, ...keys) =>
   keys.every(key => o1[key] === o2[key])

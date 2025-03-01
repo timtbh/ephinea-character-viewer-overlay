@@ -56,7 +56,7 @@ const showName = (item, unitxt) => {
   // skinned?
   const suffix = item.name.match(/\*$/) ? "*" : ""
   return (
-    pmt[item.hex].rarity < 9
+    pmt[item.hex].stars < 9
       ? `<span class="common-name ${cssIdentifierFrom(item.name)}">
            ${unitxt.items[item.hex]}
          </span>`

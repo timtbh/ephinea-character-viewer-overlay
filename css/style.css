@@ -99,6 +99,10 @@
   .inventory {
     margin-top: -5px;
   }
+
+  .inventory-meseta {
+    margin-top: 5px;
+  }
   
   .link-arrow {
     margin-left: 20px;

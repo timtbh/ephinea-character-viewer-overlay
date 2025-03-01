@@ -25,7 +25,7 @@ const showGrind = item =>
   item.grind ? `+${item.grind} ` : ""
 
 const showSpecial = (item, settings) =>
-  item.special && (!item.rare || settings.showRareSpecials)
+  item.special && (pmt[item.hex].stars < 9 || settings.showRareSpecials)
     ? `[${unitxt.en.specials[item.special]}] `
     : ""
 

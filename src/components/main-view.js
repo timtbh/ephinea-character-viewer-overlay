@@ -50,7 +50,7 @@ const showMeseta = (meseta) => {
   return `
     <div class="inventory-meseta">
       ${"&nbsp;".repeat(4)}
-      <span class="meseta">◆ ${formatted}</span>
+      <span class="meseta">${formatted} ◆</span>
     </div>`
 }
 
