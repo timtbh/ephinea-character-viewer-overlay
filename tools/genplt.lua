@@ -37,45 +37,6 @@ local function readU32(str, offset)
   )
 end
 
-local function codepointToUtf8(codepoint)
-  if codepoint > 0xFFFF then
-    return string.char(
-      bit.bor(0xF0,                bit.rshift(codepoint, 18)),
-      bit.bor(0x80, bit.band(0x3F, bit.rshift(codepoint, 12))),
-      bit.bor(0x80, bit.band(0x3F, bit.rshift(codepoint,  6))),
-      bit.bor(0x80, bit.band(0x3F, codepoint))
-    )
-  elseif codepoint > 0x7FF then
-    return string.char(
-      bit.bor(0xE0,                bit.rshift(codepoint, 12)),
-      bit.bor(0x80, bit.band(0x3F, bit.rshift(codepoint,  6))),
-      bit.bor(0x80, bit.band(0x3F, codepoint))
-    )
-  elseif codepoint > 0x7F then
-    return string.char(
-      bit.bor(0xC0, bit.rshift(codepoint, 6)),
-      bit.bor(0x80, bit.band(0x3F, codepoint))
-    )
-  else
-    return string.char(codepoint)
-  end
-end
-
--- Character names are 0-terminated.
--- This doesn't handle surrogates, so bugged for codepoints beyond the BMP.
-local function readUtf16Str(str, offset)
-  local eof   = string.len(str) - 2
-  local chars = {}
-  for idx = offset, eof, 2 do
-    local codepoint = readU16(str, idx)
-    if codepoint == 0 then
-      return table.concat(chars)
-    end
-    table.insert(chars, codepointToUtf8(codepoint))
-  end
-  error("Unterminated UTF-16 string")
-end
-
 local function readArray(str, offset, read, n, sizeof)
   local xs = {}
   for idx = 0, n - 1 do
