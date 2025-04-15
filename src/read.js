@@ -47,7 +47,6 @@ const lookupHex = (() => {
 
   const lookupTables =
     { Weapon   : makeLookupTable(0x000100, 0x00ED00)
-    , ESWeapon : makeLookupTable(0x000100, 0x00ED00)
     , Frame    : makeLookupTable(0x010100, 0x010158)
     , Barrier  : makeLookupTable(0x010200, 0x0102B5)
     , Unit     : makeLookupTable(0x010300, 0x010364)
