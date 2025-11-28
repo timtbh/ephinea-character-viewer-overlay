@@ -166,6 +166,7 @@ const parseWeapon_ = (match, hex, name, special) =>
    , hit      : +match[10]
    , untekked : !!match[11]
    , kills    : +match[12] || 0
+   , rare     : pmt[hex].stars >= 9
    , quantity : 1
    , category : "Weapon"
    , hex      : hex

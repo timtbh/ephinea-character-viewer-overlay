@@ -1,4 +1,4 @@
-export const groupBy = cmp => xs => {
+export const groupBy = (cmp, xs) => {
   const { acc, cur } =
     xs.slice(1).reduce(({ x, acc, cur }, y) =>
       cmp(x, y)
@@ -13,7 +13,7 @@ export const groupBy = cmp => xs => {
   return [...acc, cur]
 }
 
-export const chunksOf = k => xs => {
+export const chunksOf = (k, xs) => {
   const { acc, cur } =
     xs.reduce(({ acc, cur, len }, x) =>
       len == k

@@ -22,19 +22,15 @@ local function readU8(str, offset)
 end
 
 local function readU16(str, offset)
-  return bit.bor(
-    bit.lshift(str:byte(offset + 2),  8),
-               str:byte(offset + 1)
-  )
+    return str:byte(offset + 2) * 2 ^ 8
+         + str:byte(offset + 1)
 end
 
 local function readU32(str, offset)
-  return bit.bor(
-    bit.lshift(str:byte(offset + 4), 24),
-    bit.lshift(str:byte(offset + 3), 16),
-    bit.lshift(str:byte(offset + 2),  8),
-               str:byte(offset + 1)
-  )
+    return str:byte(offset + 4) * 2 ^ 24
+         + str:byte(offset + 3) * 2 ^ 16
+         + str:byte(offset + 2) * 2 ^ 8
+         + str:byte(offset + 1)
 end
 
 local function readArray(str, offset, read, n, sizeof)

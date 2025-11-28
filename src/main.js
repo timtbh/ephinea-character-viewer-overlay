@@ -47,7 +47,7 @@ const sortAndStack = items => {
     return { ...ungrouped, slot: idx + 1 }
   }
 
-  return (groupBy (itemsEqual) (items.toSorted(compareItems))).map(flatten)
+  return groupBy(itemsEqual, items.toSorted(compareItems)).map(flatten)
 }
 
 const withStackedBank = viewer => {
@@ -81,7 +81,7 @@ const addItemGroups = viewer => {
     ]
     .toSorted(compareItems)
 
-  const grouped = (groupBy (sameType) (everything)).map(sortAndStack)
+  const grouped = groupBy(sameType, everything).map(sortAndStack)
 
   const labels =
     { Common   : "Common Weapons"
