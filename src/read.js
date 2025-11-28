@@ -19,8 +19,8 @@ const readCharacterInfo = str => {
   const match = str.match(regexCharacterInfo)
   return (
     { classic        : !!match[1]
-    , slot           : (+match[2] % 4) + 1
-    , cbank          : ~~(+match[2] / 4) + 1
+    , slot           : ((+match[2] - 1) % 4) + 1
+    , cbank          : ~~((+match[2] - 1) / 4) + 1
     , name           : match[3]
     , level          : +match[4]
     , sectionId      : match[5]
