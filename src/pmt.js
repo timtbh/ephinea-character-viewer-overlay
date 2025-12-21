@@ -824,7 +824,7 @@ export const pmt =
   , 0x024000: {} // Bhima
   , 0x024100: {} // Nidra
   , 0x024200: {} // Geung-si
-  , 0x024300: {} //  
+  , 0x024300: {} // Sonic 
   , 0x024400: {} // Tellusis
   , 0x024500: {} // Striker Unit
   , 0x024600: {} // Pioneer
@@ -835,7 +835,13 @@ export const pmt =
   , 0x024B00: {} // Gael Giel
   , 0x024C00: {} // Agastya
   , 0x024D00: {} // Stealth
-  , 0x025200: {} // ????
+  , 0x024E00: {} // Mag*
+  , 0x024F00: {} // Varuna*
+  , 0x025000: {} // Kalki*
+  , 0x025100: {} // Vritra*
+  , 0x025200: {} // Present*
+  , 0x025300: {} // Saraswati
+  , 0x025400: {} // ????
   // Tools
   , 0x030000: {} // Monomate
   , 0x030001: {} // Dimate
@@ -1007,6 +1013,9 @@ export const pmt =
   , 0x030E60: {} // Divine Filter
   , 0x030E61: {} // Lock-on Filter
   , 0x030E62: {} // Heart of Partisan of Lightning
+  , 0x030E63: {} // Sonic Doll
+  , 0x030E64: {} // Mag Gift Wrap
+  , 0x030E65: {} // Seed Exchange Kit
   , 0x030F00: {} // AddSlot
   , 0x031000: {} // Photon Drop
   , 0x031001: {} // Photon Sphere

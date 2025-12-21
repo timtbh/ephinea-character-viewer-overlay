@@ -35,9 +35,10 @@ const readCharacterInfo = str => {
 const readBankSize = str =>
   +str.match(/Bank Inventory \((\d+)\/200\):$/)[1]
 
-// Skinned items with <foo>* names resolve to the same hex as <foo>
+// Skinned weapons and red rings with <Foo>* names resolve to the same hex as <Foo>
 // e.g.
-//      lookupHex("Red Ring*", "Weapon") == lookupHex("Red Ring", "Weapon")
+//      lookupHex("Dark Flow*", "Weapon") == lookupHex("Dark Flow", "Weapon")
+//      lookupHex("Red Ring*", "Barrier") == lookupHex("Red Ring", "Barrier")
 const lookupHex = (() => {
   // make tables with unitxt keys for O(1) lookups
   const makeLookupTable = (start, end) => Object.keys(pmt)
@@ -55,7 +56,10 @@ const lookupHex = (() => {
     }
 
     return (name, category) =>
-      lookupTables[category][name.replace(/\*$/, "")]
+      category == "Weapon" || category == "Barrier"
+        // Just in case <Foo>* exists but <Foo> does not.
+        ? lookupTables[category][name.replace(/\*$/, "")] || lookupTables[category][name]
+        : lookupTables[category][name]
 })()
 
 const regexFrame = /^(\d+): (\[E\] )?(.+?) \(Slots: (\d)\) \(DFP\+(\d+) EVP\+(\d+)\)$/
