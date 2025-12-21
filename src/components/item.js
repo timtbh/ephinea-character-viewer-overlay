@@ -53,8 +53,13 @@ const showAttributes = item =>
 
 // Weapons/Frames/Barriers/Units
 const showName = (item, unitxt) => {
-  // skinned?
-  const suffix = item.name.match(/\*$/) ? "*" : ""
+  // TODO: This is a hack to avoid double "**" for skinned mag names until
+  // either the hex lookup handling or some other part of read.js is improved.
+  // skinned weapon or barrier?
+  const suffix =
+    ["Weapon", "Barrier"].includes(item.category) && item.name.match(/\*$/)
+      ? "*"
+      : ""
   return (
     pmt[item.hex].stars < 9
       ? `<span class="common-name ${cssIdentifierFrom(item.name)}">
