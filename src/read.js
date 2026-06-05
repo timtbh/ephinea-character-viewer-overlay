@@ -32,8 +32,14 @@ const readCharacterInfo = str => {
     })
 }
 
-const readBankSize = str =>
-  +str.match(/Bank Inventory \((\d+)\/200\):$/)[1]
+const readBankInfo = str => {
+  const match = str.match(/Bank Inventory \((\d+)\/200\)\s+Bank Meseta: (\d+)/)
+  return (
+    { size:   +match[1]
+    , meseta: +match[2]
+    })
+}
+  
 
 // Skinned weapons and red rings with <Foo>* names resolve to the same hex as <Foo>
 // e.g.
@@ -252,6 +258,6 @@ export
   { readGuildCard
   , readAccountType
   , readCharacterInfo
-  , readBankSize
+  , readBankInfo
   , readItem
   }

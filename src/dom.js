@@ -3,7 +3,7 @@ import
   { readGuildCard
   , readAccountType
   , readCharacterInfo
-  , readBankSize
+  , readBankInfo
   , readItem
   } from "./read.js"
 
@@ -64,18 +64,22 @@ const getCharacter = table => {
 
   const k = character.inventorySize
   
-  const inventory = tds.slice(1, k + 1).map(readItem)
-  const bank      = tds.slice(k + 2).map(readItem)
-  const bankSize  = readBankSize(tds[k + 1])
+  const inventory  = tds.slice(1, k + 1).map(readItem)
+  const bank       = tds.slice(k + 2).map(readItem)
+  const bankInfo   = readBankInfo(tds[k + 1])
+  const bankSize   = bankInfo.size
+  const bankMeseta = bankInfo.meseta
   
-  return { ...character, inventory, bank, bankSize }
+  return { ...character, inventory, bank, bankSize, bankMeseta }
 }
 
 const getSharedBank = table => {
-  const tds = textAll("td", table)
-  const size = readBankSize(tds[0])
-  const bank = tds.slice(1).map(readItem)
-  return { size, bank }
+  const tds    = textAll("td", table)
+  const bank   = tds.slice(1).map(readItem)
+  const info   = readBankInfo(tds[0])
+  const size   = info.size
+  const meseta = info.meseta
+  return { bank, size, meseta }
 }
 
 export const getCharacterViewerData = () => {

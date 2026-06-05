@@ -267,6 +267,10 @@
   }
 }
 
+#cvo-item-type-view .inventory-meseta {
+  display: none;
+}
+
 body.cvo-hidden {
   margin: 0;
   font-size: 0;

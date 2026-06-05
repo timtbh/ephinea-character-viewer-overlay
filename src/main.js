@@ -55,7 +55,8 @@ const withStackedBank = viewer => {
     .map(character => ({ ...character, bank: sortAndStack(character.bank) }))
 
   const sharedBank =
-    { size: viewer.sharedBank.size
+    { ...viewer.sharedBank
+    , size: viewer.sharedBank.size
     , bank: sortAndStack(viewer.sharedBank.bank)
     }
 

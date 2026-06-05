@@ -2,16 +2,27 @@ import { range, chunksOf, cssIdentifierFrom } from "../utils.js"
 import { showItem, defaults } from "./item.js"
 import { showJumpMenu } from "./jump-menu.js"
 
+const showMeseta = (meseta) => {
+  const formatted = meseta.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')
+  return `
+    <div class="inventory-meseta">
+      ${"&nbsp;".repeat(4)}
+      <span class="meseta">${formatted} ◆</span>
+    </div>`
+}
+
 const showItemColumn = (items, unitxt, settings) =>
   items.map(item => `<div>${showItem(item, unitxt, settings)}</div>`).join("")
 
-const showItems = (items, unitxt, itemsPerColumn, settings = defaults) => {
-  const columns = range(0, Math.floor((items.length - 1) / itemsPerColumn))
+const showItems = (items, meseta, unitxt, itemsPerColumn, settings = defaults) => {
+  const lastIndex = Math.floor(items.length / itemsPerColumn)
+  const columns = range(0, lastIndex)
     .map(idx => {
       const k = idx * itemsPerColumn
       return `
         <div style="flex-grow: 2">
           ${showItemColumn(items.slice(k, k + itemsPerColumn), unitxt, settings)}
+          ${idx === lastIndex ? showMeseta(meseta) : ""}
         </div>`
     })
 
@@ -45,15 +56,6 @@ const showTraps = (characterClass, level) => {
   }).join("")
 }
 
-const showMeseta = (meseta) => {
-  const formatted = meseta.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')
-  return `
-    <div class="inventory-meseta">
-      ${"&nbsp;".repeat(4)}
-      <span class="meseta">${formatted} ◆</span>
-    </div>`
-}
-
 const showCharacter = (character, unitxt) =>
   `<section class="entry" id="${link(character)}">
     <div class="left-column">
@@ -69,14 +71,14 @@ const showCharacter = (character, unitxt) =>
       </div>
       <div class="column-label">INVENTORY (${character.inventorySize}/30)</div>
       <div class="inventory">
-        ${showItems(character.inventory, unitxt, 50)}
-        ${showMeseta(character.meseta)}
+        ${showItems(character.inventory, character.meseta, unitxt, 50)}
+        
       </div>
     </div>
     <div class="right-column">
       <div class="column-label">BANK (${character.bankSize}/200)</div>
       <div class="flex-row flex-top">
-        ${showItems(character.bank, unitxt, 50)}
+        ${showItems(character.bank, character.bankMeseta, unitxt, 50)}
       </div>
     </div>
   </section>`
@@ -84,7 +86,7 @@ const showCharacter = (character, unitxt) =>
 const showCharacters = (characters, unitxt) =>
     characters.map(character => showCharacter(character, unitxt)).join("")
 
-const showSingleColumnEntry = (items, itemsPerColumn, label, id, unitxt, settings) =>
+const showSingleColumnEntry = (items, meseta, itemsPerColumn, label, id, unitxt, settings) =>
   `<section class="entry" id="${id}">
     <div class="cvo-column single-column">
       <div class="column-label">
@@ -92,20 +94,20 @@ const showSingleColumnEntry = (items, itemsPerColumn, label, id, unitxt, setting
         <span class="link-arrow">&#x293B;</span>
       </div>
       <div class="flex-row flex-top">
-        ${showItems(items, unitxt, itemsPerColumn, settings)}
+        ${showItems(items, meseta, unitxt, itemsPerColumn, settings)}
       </div>
     </div>
   </section>`
 
 const showSharedBank = (bank, unitxt) =>
   showSingleColumnEntry(
-    bank.bank, 50, `SHARED BANK (${bank.size}/200)`, "cvo-shared-bank", unitxt
+    bank.bank, bank.meseta, 50, `SHARED BANK (${bank.size}/200)`, "cvo-shared-bank", unitxt
   )
 
 const showClassicBank = (bank, unitxt) =>
   bank.size > 0
     ? showSingleColumnEntry(
-        bank.bank, 50, `CLASSIC BANK (${bank.size}/200)`, "cvo-classic-bank", unitxt
+        bank.bank, bank.meseta, 50, `CLASSIC BANK (${bank.size}/200)`, "cvo-classic-bank", unitxt
       )
       
     : ""
@@ -116,7 +118,7 @@ const showItemTypeView = (viewer, unitxt) =>
       const itemsPerColumn = Math.ceil(items.length / 4)
       const id = cssIdentifierFrom(label)
       return showSingleColumnEntry(
-        items, itemsPerColumn, label, id, unitxt, { showEquipped: false }
+        items, 0, itemsPerColumn, label, id, unitxt, { showEquipped: false }
       )
     })
     .join("")
