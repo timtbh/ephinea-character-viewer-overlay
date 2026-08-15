@@ -824,7 +824,7 @@ export const pmt =
   , 0x024000: {} // Bhima
   , 0x024100: {} // Nidra
   , 0x024200: {} // Geung-si
-  , 0x024300: {} // Sonic 
+  , 0x024300: {} // Sonic
   , 0x024400: {} // Tellusis
   , 0x024500: {} // Striker Unit
   , 0x024600: {} // Pioneer
@@ -1016,6 +1016,8 @@ export const pmt =
   , 0x030E63: {} // Sonic Doll
   , 0x030E64: {} // Mag Gift Wrap
   , 0x030E65: {} // Seed Exchange Kit
+  , 0x030E66: {} // Heart of Flight Fan
+  , 0x030E67: {} // Blue Powder Coating
   , 0x030F00: {} // AddSlot
   , 0x031000: {} // Photon Drop
   , 0x031001: {} // Photon Sphere
